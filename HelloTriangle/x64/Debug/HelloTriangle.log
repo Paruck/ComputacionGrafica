@@ -1,0 +1,4 @@
+﻿  Application.cpp
+c:\users\emi_s_000\onedrive\documentos\graficacion\projectoscg2\hellotriangle\src\application.cpp(88): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+  HelloTriangle.vcxproj -> C:\Users\emi_s_000\OneDrive\Documentos\Graficacion\ProjectosCG2\x64\Debug\HelloTriangle.exe
+  HelloTriangle.vcxproj -> C:\Users\emi_s_000\OneDrive\Documentos\Graficacion\ProjectosCG2\x64\Debug\HelloTriangle.pdb (Partial PDB)
