@@ -1,0 +1,7 @@
+﻿  ShaderFuncs.cpp
+c:\users\emi_s_000\onedrive\documentos\graficacion\projectoscg2\helloquad\src\shaderfuncs.cpp(2): fatal error C1083: No se puede abrir el archivo incluir: 'ShaderFuncs.h': No such file or directory
+  HelloQuad.cpp
+c:\users\emi_s_000\onedrive\documentos\graficacion\projectoscg2\helloquad\src\helloquad.cpp(7): fatal error C1083: No se puede abrir el archivo incluir: 'GL/glew.h': No such file or directory
+  Application.cpp
+c:\users\emi_s_000\onedrive\documentos\graficacion\projectoscg2\helloquad\src\application.cpp(2): fatal error C1083: No se puede abrir el archivo incluir: 'Application.h': No such file or directory
+  Generando código...
