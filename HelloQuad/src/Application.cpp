@@ -13,62 +13,13 @@
 #include "ShaderFuncs.h"
 
 GLfloat vertexPositions[] = {
-	// 1.0f, 1.0f, -0.0f, 1.0f,
-	//-1.0f, -1.0f, -0.0f, 1.0f,
-	// 1.0f, -1.0f, 0.0f, 1.0f,
+	 1.0f, 1.0f, -0.0f, 1.0f,
+	-1.0f, -1.0f, -0.0f, 1.0f,
+	 1.0f, -1.0f, 0.0f, 1.0f,
 
-	//-1.0f, 1.0f, -0.0f, 1.0f,
-	//-1.0f, -1.0f, 0.0f, 1.0f,
-	// 1.0f, 1.0f, -0.0f, 1.0f,
-
-	 -1.0f,-1.0f,-1.0f, 1.0f, // triángulo 1 : comienza
-	 -1.0f,-1.0f, 1.0f, 1.0f,
-	 -1.0f, 1.0f, 1.0f, 1.0f,
-	 // triángulo 1 : termina
-	 1.0f, 1.0f,-1.0f, 1.0f, // triángulo 2 : comienza
-	 -1.0f,-1.0f,-1.0f, 1.0f,
-	 -1.0f, 1.0f,-1.0f, 1.0f,
-	 // triángulo 2 : termina
-	 1.0f,-1.0f, 1.0f, 1.0f,
-	 -1.0f,-1.0f,-1.0f, 1.0f,
-	 1.0f,-1.0f,-1.0f, 1.0f,
-
-	 1.0f, 1.0f,-1.0f, 1.0f,
-	 1.0f,-1.0f,-1.0f, 1.0f,
-	 -1.0f,-1.0f,-1.0f, 1.0f,
-
-	 -1.0f,-1.0f,-1.0f, 1.0f,
-	 -1.0f, 1.0f, 1.0f, 1.0f,
-	 -1.0f, 1.0f,-1.0f, 1.0f,
-
-	 1.0f,-1.0f, 1.0f, 1.0f,
-	 -1.0f,-1.0f, 1.0f, 1.0f,
-	 -1.0f,-1.0f,-1.0f, 1.0f,
-
-	 -1.0f, 1.0f, 1.0f, 1.0f,
-	 -1.0f,-1.0f, 1.0f, 1.0f,
-	 1.0f,-1.0f, 1.0f, 1.0f,
-
-	 1.0f, 1.0f, 1.0f, 1.0f,
-	 1.0f,-1.0f,-1.0f, 1.0f,
-	 1.0f, 1.0f,-1.0f, 1.0f,
-
-	 1.0f,-1.0f,-1.0f, 1.0f,
-	 1.0f, 1.0f, 1.0f, 1.0f,
-	 1.0f,-1.0f, 1.0f, 1.0f,
-
-	 1.0f, 1.0f, 1.0f, 1.0f,
-	 1.0f, 1.0f,-1.0f, 1.0f,
-	 -1.0f, 1.0f,-1.0f, 1.0f,
-
-	 1.0f, 1.0f, 1.0f, 1.0f,
-	 -1.0f, 1.0f,-1.0f, 1.0f,
-	 -1.0f, 1.0f, 1.0f, 1.0f,
-
-	 1.0f, 1.0f, 1.0f, 1.0f,
-	 -1.0f, 1.0f, 1.0f, 1.0f,
-	 1.0f,-1.0f, 1.0f, 1.0f,
-
+	-1.0f, 1.0f, -0.0f, 1.0f,
+	-1.0f, -1.0f, 0.0f, 1.0f,
+	 1.0f, 1.0f, -0.0f, 1.0f,
 
 };
 
@@ -76,59 +27,19 @@ GLfloat vertexPositions[] = {
 GLfloat vertexColors[] = {
 
 	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
 	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
 	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
 	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
 	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
 	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
-	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
-	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
-	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
-	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
-	1.0f, 0.0f, 0.0f, 0.5f,
-	0.0f, 1.0f, 0.0f, 0.5f,
-	0.0f, 0.0f, 1.0f, 0.5f,
-
-
 };
 
 
-Application::Application() : eye(0.0f, 0.0f, 4.0f), 
+Application::Application() : eye(0.0f, 0.0f, 6.0f), 
 							target (0.0f, 0.0f, 0.0f),
 							transform(glm::mat4(1.0f)), 
+							transform2(glm::mat4(1.0f)),
+							Rotacion(glm::mat4(1.0f)),
 							angles(1.0f, 0.0f, 0.0f)
 {}
 
@@ -143,12 +54,12 @@ void Application::update()
 		angles.y += 0.1f;
 	if(flagZ)
 		angles.z += 0.1f;
+
 	camera = glm::lookAt(eye, target, glm::vec3(0.0f, 1.0f, 0.0f));
-	transform = glm::rotate(glm::mat4(1.0f), glm::radians(angles.x), glm::vec3(1.0f, 0.0f, 0.0f));
-	transform = glm::rotate(transform, glm::radians(angles.y), glm::vec3(0.0f, 1.0f, 0.0f));
-	transform = glm::rotate(transform, glm::radians(angles.z), glm::vec3(0.0f, 0.0f, 1.0f));
+	transform = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
 	transform = glm::perspective(45.0f, 1024.0f/758.0f , 0.1f, 10.0f) * 
 				camera * transform;
+
 }
 
 void Application::keyboard(int key, int scancode, int actions, int mods)
@@ -199,7 +110,7 @@ void Application::setup()
 	InitializeProgram(triangle.shader, strVertexShader, strFragmentShader);
 	idTransform = glGetUniformLocation(triangle.shader, "transform");
 
-	triangle.numVertex = 36;
+	triangle.numVertex = 6;
 	glGenVertexArrays(1, &triangle.vao);
 	glBindVertexArray(triangle.vao);
 	glGenBuffers(1, &triangle.vbo);
@@ -226,12 +137,16 @@ void Application::display()
 
 	//Seleccionamos los shaders a usar
 	glUseProgram(triangle.shader);	
-	glUniformMatrix4fv(idTransform, 1, GL_FALSE, glm::value_ptr(transform));
-	
-	//activamos el vertex array object y dibujamos
 	glBindVertexArray(triangle.vao);
 
+	glUniformMatrix4fv(idTransform, 1, GL_FALSE, glm::value_ptr(transform));
 	glDrawArrays(GL_TRIANGLES, 0, triangle.numVertex);
+	
+	/*glUniformMatrix4fv(idTransform, 1, GL_FALSE, glm::value_ptr(transform2));
+	glDrawArrays(GL_TRIANGLES, 0, triangle.numVertex);*/
+
+	//activamos el vertex array object y dibujamos
+
 }
 
 void Application::reshape(int w, int h)

@@ -28,7 +28,9 @@ private:
 	Object3D triangle;
 	glm::mat4 camera;
 	glm::vec3 eye, target, angles;
-	glm::mat4 transform;
+	glm::mat4	transform,
+				transform2,
+				Rotacion;
 
 	GLuint idTransform;
 };
