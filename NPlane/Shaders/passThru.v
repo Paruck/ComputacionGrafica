@@ -12,7 +12,7 @@ void main()
 {
 	newPos = vPosition;
 	color = vec4(0.0, 0.7, 0.5, 1.0);
-	newPos.y = 2.0 * sin (.005 * (newPos.x*newPos.x   +  newPos.z * newPos.z) - fTime);
+	newPos.y = 2.0 * sin (.5 * (newPos.x*newPos.x*newPos.x   +  newPos.z * newPos.z*newPos.z) - fTime);
 
 	gl_Position = mTransform * newPos;
 }

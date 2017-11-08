@@ -92,7 +92,7 @@ void Application::keyboard(int key, int scancode, int action, int mods){
 
 void Application::cursor_position(double xpos, double ypos)
 {
-	if( xpos >= 512 && xpos <= 1024)
+	if( xpos >= 0 && xpos <= 1024 && ypos >= 0 && ypos <= 360)
 		rotateY = glm::rotate(glm::mat4(1.0f), glm::radians((float)xpos / 4), glm::vec3(0.0f, 1.0f, 0.0f));
 	else if(ypos >= 384 && ypos <= 768)
 		rotateY = glm::rotate(glm::mat4(1.0f), glm::radians((float)ypos / 2), glm::vec3(1.0f, 0.0f, 0.0f));
