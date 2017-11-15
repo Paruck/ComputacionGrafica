@@ -19,6 +19,7 @@ public:
 	void display();
 	void reshape(int w, int h);
 	void keyboard(int key, int scancode, int action, int mods);
+	void cursor_position(double xpos, double ypos);
 	void crearCubo();
 
 	GLFWwindow* window;
@@ -28,7 +29,7 @@ private:
 	Plane oPlane;
 	Object3D cube;
 	float time;
-	glm::mat4 transform;
+	glm::mat4 transform, rotateY;
 	glm::mat4 transform2;
 	glm::vec3 eye;
 	glm::vec3 target;
@@ -51,7 +52,9 @@ private:
 	GLuint mTransformID,
 			eyeID,
 			myLightPositionID,
-			fTimeID;
+			fTimeID, 
+			cameraID,
+			perspectiveID;
 
 	GLuint idTransform;
 };

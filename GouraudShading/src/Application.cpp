@@ -26,9 +26,9 @@ void Application::update(){
 	if (flagX2 == true)
 		myLightPosition.x -= 0.1f;
 	if (flagY)
-		myLightPosition.y += 0.1f;
+		myLightPosition.z -= 0.1f;
 	if (flagY2)
-		myLightPosition.y -= 0.1f;
+		myLightPosition.z += 0.1f;
 }
 
 void Application::setup(){
@@ -43,6 +43,8 @@ void Application::setup(){
 	fTimeID = glGetUniformLocation(oPlane.shader, "fTime");
 	eyeID = glGetUniformLocation(oPlane.shader, "vEye");
 	myLightPositionID = glGetUniformLocation(oPlane.shader, "myLightPosition");
+	cameraID = glGetUniformLocation(oPlane.shader, "camera");
+	perspectiveID = glGetUniformLocation(oPlane.shader, "perspective");
 
 	glGenVertexArrays(1, &oPlane.vao);
 	glBindVertexArray(oPlane.vao);
@@ -75,8 +77,11 @@ void Application::display() {
 	glBindVertexArray(oPlane.vao);
 	lookAt = glm::lookAt(eye, target, up);
 	perspective = glm::perspective(45.0f, 640.0f / 480.0f, 0.1f, 200.0f);
-	transform = perspective*lookAt;
+	transform = glm::mat4(1.0f) * rotateY;
 	glUniformMatrix4fv(mTransformID, 1, false, glm::value_ptr(transform));
+	glUniformMatrix4fv(cameraID, 1, false, glm::value_ptr(lookAt));
+	glUniformMatrix4fv(perspectiveID, 1, false, glm::value_ptr(perspective));
+
 
 	//parametro de fase para shaders
 	glUniform1f(fTimeID, glm::radians(time));
@@ -92,7 +97,7 @@ void Application::display() {
 	glUseProgram(cube.shader);
 	glBindVertexArray(cube.vao);
 
-	transform2 = glm::translate(transform, newLight);
+	transform2 = glm::translate(perspective* lookAt, newLight);
 
 	glUniformMatrix4fv(idTransform, 1, GL_FALSE, glm::value_ptr(transform2));
 	glDrawArrays(GL_TRIANGLES, 0, cube.numVertex);
@@ -312,4 +317,12 @@ void Application::crearCubo()
 	glEnableVertexAttribArray(1);
 
 
+}
+
+void Application::cursor_position(double xpos, double ypos)
+{
+	if (xpos >= 0 && xpos <= 1024 && ypos >= 0 && ypos <= 360)
+		rotateY = glm::rotate(glm::mat4(1.0f), glm::radians((float)xpos / 2), glm::vec3(0.0f, 1.0f, 0.0f));
+	else if (ypos >= 384 && ypos <= 768)
+		rotateY = glm::rotate(glm::mat4(1.0f), glm::radians((float)ypos / 1), glm::vec3(1.0f, 0.0f, 0.0f));
 }

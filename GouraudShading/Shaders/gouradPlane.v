@@ -7,6 +7,9 @@ uniform float fTime;
 uniform vec3 myLightPosition;
 uniform vec3 vEye;
 
+uniform mat4 camera;
+uniform mat4 perspective;
+
 out vec4 color;
 
 
@@ -92,5 +95,5 @@ void main()
 			,0.0, 1.0);
 
 	
-   gl_Position = mTransform * vNewVec;
+   gl_Position = perspective * camera * mTransform * vNewVec;
 }

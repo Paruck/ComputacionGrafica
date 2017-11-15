@@ -30,6 +30,11 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	app.keyboard(key, scancode, action, mods);
 }
 
+void cursor_position(GLFWwindow* window, double xpos, double ypos) {
+	app.cursor_position(xpos, ypos);
+}
+
+
 int main(int argc, char *argv[]){
 
 
@@ -68,6 +73,7 @@ int main(int argc, char *argv[]){
 	glEnable(GL_DEPTH_TEST); //Z-buffer
 	
 	glfwSetKeyCallback(window, key_callback);
+	glfwSetCursorPosCallback(window, cursor_position);
 
 	while (!glfwWindowShouldClose(window))
 	{

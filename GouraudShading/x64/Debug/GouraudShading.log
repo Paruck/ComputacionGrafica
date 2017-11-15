@@ -1,6 +1,13 @@
-﻿  Application.cpp
-  Generando código...
-  Omitiendo... (no se detectaron cambios relevantes)
+﻿  ShaderFuncs.cpp
+  Plane.cpp
+c:\users\emi_s_000\documents\graficacion\projectoscg2\gouraudshading\src\plane.cpp(34): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\documents\graficacion\projectoscg2\gouraudshading\src\plane.cpp(42): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\documents\graficacion\projectoscg2\gouraudshading\src\plane.cpp(43): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\documents\graficacion\projectoscg2\gouraudshading\src\plane.cpp(124): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
   NPlane.cpp
-  GouraudShading.vcxproj -> C:\Users\emi_s_000\OneDrive\Documentos\Graficacion\ProjectosCG2\x64\Debug\GouraudShading.exe
-  GouraudShading.vcxproj -> C:\Users\emi_s_000\OneDrive\Documentos\Graficacion\ProjectosCG2\x64\Debug\GouraudShading.pdb (Partial PDB)
+c:\users\emi_s_000\documents\graficacion\projectoscg2\gouraudshading\src\nplane.cpp(65): warning C4129: ' ': secuencia de escape de carácter no reconocida
+c:\users\emi_s_000\documents\graficacion\projectoscg2\gouraudshading\src\nplane.cpp(66): warning C4129: ' ': secuencia de escape de carácter no reconocida
+  Application.cpp
+  Generando código...
+  GouraudShading.vcxproj -> C:\Users\emi_s_000\Documents\Graficacion\ProjectosCG2\x64\Debug\GouraudShading.exe
+  GouraudShading.vcxproj -> C:\Users\emi_s_000\Documents\Graficacion\ProjectosCG2\x64\Debug\GouraudShading.pdb (Partial PDB)
