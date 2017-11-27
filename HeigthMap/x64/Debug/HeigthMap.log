@@ -1,0 +1,7 @@
+﻿  Plane.cpp
+c:\users\emi_s_000\documents\graficacion\projectoscg2\heigthmap\src\plane.cpp(32): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\documents\graficacion\projectoscg2\heigthmap\src\plane.cpp(40): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\documents\graficacion\projectoscg2\heigthmap\src\plane.cpp(41): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\documents\graficacion\projectoscg2\heigthmap\src\plane.cpp(122): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  HeigthMap.vcxproj -> C:\Users\emi_s_000\Documents\Graficacion\ProjectosCG2\x64\Debug\HeigthMap.exe
+  HeigthMap.vcxproj -> C:\Users\emi_s_000\Documents\Graficacion\ProjectosCG2\x64\Debug\HeigthMap.pdb (Partial PDB)
